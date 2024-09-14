@@ -47,3 +47,51 @@ nav ul li a:hover{
     color: var(--secondary);
 }
 
+.toggle-menu{
+    display: none;
+}
+.bar{
+    width: 15px;
+    height: 2px;
+    background-color: var(--white);
+}
+
+
+
+
+@media (max-width:540px) {
+    nav ul{
+        display:none;
+    }
+
+    .toggle-menu{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nav-list {
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        background-color: var(--primary);
+        width: 100%;
+        display: none;
+    }
+
+    #nav-list li {
+        text-align: center;
+        width: 100%;
+    }
+
+    #nav-list.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
